@@ -30,8 +30,8 @@ def main(argv):
 	puzzle_count = 0
 	for puzzle in puzzles:
 		#solution.append(solve(puzzle))
+		
 		print "Solution #",puzzle_count,": ",solve(puzzle),"\n"
-		puzzle_count += 1
 
 def getBoards(string):
 	puzzles=[]
