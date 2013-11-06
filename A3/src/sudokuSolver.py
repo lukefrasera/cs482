@@ -1,4 +1,4 @@
-import getopt, sys
+import getopt, sys, os
 sys.path.append("include/")
 from sudoku import *
 
@@ -19,19 +19,15 @@ def main(argv):
 		return
 	puzzles = getBoards(file.read())
 	
-	puzzle_count = 0
-	for puzzle in puzzles:
-		print "Puzzle #",puzzle_count,": ",puzzle
-		puzzle_count+=1
+	# DISPLAY PUZZLES
+	for i, puzzle in enumerate(puzzles):
+		print "Puzzle #",i,": ",puzzle
 	print "\n"
 
 	# SOLVE EACH PUZZLE IN FILE
-	solution = 0
-	puzzle_count = 0
-	for puzzle in puzzles:
+	for i, puzzle in enumerate(puzzles):
 		#solution.append(solve(puzzle))
-		print "Solution #",puzzle_count,": ",solve(puzzle),"\n"
-		puzzle_count += 1
+		print "Solution #",i,": ",solve(puzzle),"\n"
 
 def getBoards(string):
 	puzzles=[]
