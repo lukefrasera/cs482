@@ -28,7 +28,8 @@ def main(argv):
 	for i, puzzle in enumerate(puzzles):
 		solution = solve(puzzle)
 		print "Solution #",i,": Solved:", solved(solution)
-		display(solution)
+		if solved(solution):
+			display(solution)
 
 def getBoards(string):
 	puzzles=[]
