@@ -26,8 +26,9 @@ def main(argv):
 
 	# SOLVE EACH PUZZLE IN FILE
 	for i, puzzle in enumerate(puzzles):
-		#solution.append(solve(puzzle))
-		print "Solution #",i,": ",solve(puzzle),"\n"
+		solution = solve(puzzle)
+		print "Solution #",i,": Solved:", solved(solution)
+		display(solution)
 
 def getBoards(string):
 	puzzles=[]
